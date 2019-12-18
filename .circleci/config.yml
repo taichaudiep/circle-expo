@@ -1,10 +1,10 @@
   version: 2
   jobs:
-      - build:
+      build:
           filters:
             tags:
               only: /^\d+\.\d+\.\d+$/
-      - publish-github-release:
+      publish-github-release:
           requires:
             - build
           filters:
