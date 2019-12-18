@@ -30,7 +30,3 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-          
-  - publish-github-release:
-          requires:
-            - build
