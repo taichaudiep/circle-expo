@@ -13,7 +13,7 @@ publish: &publish
 
     - run:
         name: Login into Expo
-        command: npx expo-cli login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+        command: npx expo-cli login -u idsteamvn@gmail.com -p slsZ1XmB
 
     - run:
         name: Publish to Expo
