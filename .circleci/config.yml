@@ -20,11 +20,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run:
-          name: Release apk
-          command: expo build:android
-      
+          
       - run:
           name: Print the Current Time
           command: date
