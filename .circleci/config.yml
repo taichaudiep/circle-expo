@@ -16,11 +16,13 @@ jobs:
 
       - run: yarn install
 
+      - run: npm install expo-cli --global
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-          
+
       - run:
           name: Print the Current Time
           command: date
