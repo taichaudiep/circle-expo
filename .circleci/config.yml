@@ -35,6 +35,6 @@ jobs:
      - build
     filters:
         branches:
-      ignore: /.*/
+      - ignore: /.*/
     tags:
     only: /^\d+\.\d+\.\d+$/
