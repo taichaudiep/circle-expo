@@ -30,3 +30,11 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  publish-github-release:
+    requires:
+     - build
+    filters:
+        branches:
+      ignore: /.*/
+    tags:
+    only: /^\d+\.\d+\.\d+$/
