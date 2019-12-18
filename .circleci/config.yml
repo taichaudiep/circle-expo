@@ -26,15 +26,16 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
+          
+      - publish-github-release:
+            requires:
+             - build
+            filters:
+              - branches:
+                ignore: /.*/
+            tags:
+            only: /^\d+\.\d+\.\d+$/
       - run:
           name: Print the Current Time
           command: date
-  publish-github-release:
-    requires:
-     - build
-    filters:
-      - branches:
-        ignore: /.*/
-    tags:
-    only: /^\d+\.\d+\.\d+$/
+  
