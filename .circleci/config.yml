@@ -1,7 +1,6 @@
 workflows:
   version: 2
-  main:
-    jobs:
+  jobs:
       - build:
           filters:
             tags:
