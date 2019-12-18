@@ -23,7 +23,7 @@ jobs:
 
       - run:
           name: Release apk
-          command: date
+          command: expo build:android
       
       - run:
           name: Print the Current Time
