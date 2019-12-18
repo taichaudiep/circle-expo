@@ -16,7 +16,7 @@ jobs:
 
       - run: yarn install
 
-      - run: npm install expo-cli --global
+      - run: sudo npm install expo-cli --global
 
       - save_cache:
           paths:
