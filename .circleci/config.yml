@@ -18,10 +18,10 @@ jobs:
          tags:
            only: /^\d+\.\d+\.\d+$/
   publish-github-release:
-          requires:
-            - build
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^\d+\.\d+\.\d+$/ 
+    requires:
+      - build
+    filters:
+      branches:
+        ignore: /.*/
+      tags:
+        only: /^\d+\.\d+\.\d+$/ 
