@@ -5,9 +5,9 @@
             tags:
               only: /^\d+\.\d+\.\d+$/
       publish-github-release:
-          requires:
+            requires:
             - build
-          filters:
+            filters:
             branches:
               ignore: /.*/
             tags:
