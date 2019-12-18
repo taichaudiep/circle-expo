@@ -14,3 +14,14 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+    filters:
+         tags:
+           only: /^\d+\.\d+\.\d+$/
+  publish-github-release:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^\d+\.\d+\.\d+$/ 
